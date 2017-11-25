@@ -1,0 +1,36 @@
+page-index {
+
+.background{
+    background-image: url("../../assets/imgs/tthcBD.jpg");
+    height: 40%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(0px);
+    background-position: center center;
+    transform: scale(1, 1.13);
+}
+.main-cnt{
+    width: 100%;
+    height: 700
+}
+.search{
+    border-radius: 50%;
+    z-index: 10;
+    margin-top: -270px;
+    margin-bottom: 200px;
+}
+#lbTitle{
+    text-align: center;
+    padding-top: 10px;
+    color: whitesmoke;
+    
+}
+ion-list button.item.item-block.item-md{
+    color: #1700e4;
+    margin-bottom: 0px;
+}
+// #list{
+//     color: blue;
+// }
+}
