@@ -1,47 +1,53 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+import { detailClass } from './../pages/detail/detailClass';
+import { PageInfoPage } from './../pages/detail/page-info/page-info';
+import { PageInfoDePage } from './../pages/detail/page-info-de/page-info-de';
+import { PageDocsPage } from './../pages/detail/page-docs/page-docs';
+import { DetailPage } from './../pages/detail/detail';
+import { FieldPage } from './../pages/field/field';
+import { ProceduresServiceService } from './../service/procedures-service.service';
+import { ParallaxDirective } from './../directives/parallax/parallax';
 import { BrowserModule } from '@angular/platform-browser';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { MyApp } from './app.component';
-
-import { IndexPage } from '../pages/index/index';
-import { ChitietlinhvucPage } from '../pages/chitietlinhvuc/chitietlinhvuc';
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
-import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
-import { ParallaxDirective } from '../directives/parallax/parallax';
-
-import { StatusBar } from '@ionic-native/status-bar';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+import { HttpModule } from '@angular/http';
+
+import { MyApp } from './app.component';
+import { HomePage } from '../pages/home/home';
 
 @NgModule({
   declarations: [
     MyApp,
-    IndexPage,
-    ChitietlinhvucPage,
-    AboutPage,
-    ContactPage,
     HomePage,
-    TabsPage
+    FieldPage,
+    DetailPage,
+    PageDocsPage,
+    PageInfoDePage,
+    PageInfoPage,
+    ParallaxDirective
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    IndexPage,
-    ChitietlinhvucPage,
-    AboutPage,
-    ContactPage,
     HomePage,
-    TabsPage
+    FieldPage,
+    DetailPage,
+    PageDocsPage,
+    PageInfoDePage,
+    PageInfoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ProceduresServiceService,
+    detailClass
   ]
 })
 export class AppModule {}
