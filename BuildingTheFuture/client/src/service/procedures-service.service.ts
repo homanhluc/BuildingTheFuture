@@ -27,4 +27,11 @@ export class ProceduresServiceService {
   errorHandler(error: Response) {
     return Observable.throw(error || 'SERVER ERROR');
   }
+  searchQuery(name) {
+    return this.index().forEach(element => {
+      if(name === element.title) {
+        this.data.push(name);
+      }
+    });
+  }
 }

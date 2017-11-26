@@ -26,7 +26,7 @@ export class FieldPage {
   }
 
   ngOnInit() {
-    this.namePage = this.navParams.get('name');
+    this.namePage = this.navParams.get('query');
     this.presentLoading();
   }
   presentLoading() {
@@ -35,10 +35,11 @@ export class FieldPage {
     });
     loading.present();
     this.proceduresService.index().subscribe(data => {
-      data.content.forEach(element => {
-        if (element.field === this.namePage) {
-          this.data.push(element);
-        }
+      this.data = data.content.filter(element => {
+        // if (element.title === this.namePage) {
+        //   this.data.push(element);
+        // }
+        return (element.title.toLowerCase().indexOf(this.namePage.toLowerCase()) > -1);
       });
       loading.dismiss();
     });

@@ -12,77 +12,69 @@
 
 </ion-header>
 
-
 <ion-content padding>
-  <ion-list *ngFor="let i of data">
-    <ion-item>
-      {{i?.agencydecides}}
-    </ion-item>
-  </ion-list>
+  <ion-card>
+    <ion-card-header text-wrap class="demuc">
+      Cơ quan có thẩm quyền quyết định:
+    </ion-card-header>
+    <ion-card-content (click)=" mapView(data[0].agencydecides)">
+      {{data[0].agencydecides}}
+      <p>Nhấp để tìm vị trí gần bạn nhất!</p>
+    </ion-card-content>
+  </ion-card>
 
   <ion-card>
-      <ion-card-header text-wrap class="demuc">
-          Cơ quan có thẩm quyền quyết định:
-      </ion-card-header>
-      <ion-card-content>
-        NOI DUNG GI DO
-      </ion-card-content>
-    </ion-card>
+    <ion-card-header text-wrap class="demuc">
+      Cơ quan hoặc người có thẩm quyền được uỷ quyền hoặc phân cấp thực hiện (nếu có):
+    </ion-card-header>
+    <ion-card-content>
+      {{data[0].authorizedperson}}
+    </ion-card-content>
+  </ion-card>
 
-    <ion-card>
-        <ion-card-header text-wrap class="demuc">
-            Cơ quan hoặc người có thẩm quyền được uỷ quyền hoặc phân cấp thực hiện (nếu có):
-        </ion-card-header>
-        <ion-card-content>
-          NOI DUNG GI DO
-        </ion-card-content>
-      </ion-card>
+  <ion-card>
+    <ion-card-header text-wrap class="demuc">
+      Cơ quan trực tiếp thực hiện TTHC:
+    </ion-card-header>
+    <ion-card-content>
+      {{data[0].agencydirectly}}
+    </ion-card-content>
+  </ion-card>
 
-      <ion-card>
-          <ion-card-header text-wrap class="demuc"> 
-              Cơ quan trực tiếp thực hiện TTHC:
-          </ion-card-header>
-          <ion-card-content>
-            NOI DUNG GI DO
-          </ion-card-content>
-        </ion-card>
+  <ion-card>
+    <ion-card-header text-wrap class="demuc">
+      Cơ quan phối hợp (nếu có):
+    </ion-card-header>
+    <ion-card-content>
+      {{data[0].coordinatingagency}}
+    </ion-card-content>
+  </ion-card>
 
-        <ion-card>
-            <ion-card-header text-wrap class="demuc">
-            Cơ quan phối hợp (nếu có):
-            </ion-card-header>
-            <ion-card-content>
-              NOI DUNG GI DO
-            </ion-card-content>
-          </ion-card>
+  <ion-card>
+    <ion-card-header text-wrap class="demuc">
+      Cách thức thực hiện:
+    </ion-card-header>
+    <ion-card-content>
+      {{data[0].doing}}
+    </ion-card-content>
+  </ion-card>
 
-          <ion-card>
-              <ion-card-header text-wrap class="demuc">
-              Cách thức thực hiện:
-              </ion-card-header>
-              <ion-card-content>
-                NOI DUNG GI DO
-              </ion-card-content>
-            </ion-card>
+  <ion-card>
+    <ion-card-header text-wrap class="demuc">
+      Đối tượng thực hiện:
+    </ion-card-header>
+    <ion-card-content>
+      {{data[0].objectsimplemented}}
+    </ion-card-content>
+  </ion-card>
 
-            <ion-card>
-                <ion-card-header text-wrap class="demuc">
-                Đối tượng thực hiện:
-                </ion-card-header>
-                <ion-card-content>
-                  NOI DUNG GI DO
-                </ion-card-content>
-              </ion-card>
-
-              <ion-card>
-                  <ion-card-header text-wrap class="demuc">
-                      Kết quả của việc thực hiện TTHC:
-                  </ion-card-header>
-                  <ion-card-content>
-                    NOI DUNG GI DO
-                  </ion-card-content>
-                </ion-card>
-
-
+  <ion-card>
+    <ion-card-header text-wrap class="demuc">
+      Kết quả của việc thực hiện TTHC:
+    </ion-card-header>
+    <ion-card-content>
+      {{data[0].result}}
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

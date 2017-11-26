@@ -13,7 +13,8 @@
 
 <ion-content parallax>
   <div class="bg"></div>
-  <ion-searchbar class="search" placeholder="Tìm kiếm lĩnh vực thủ tục" (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-searchbar placeholder="Tìm kiếm lĩnh vực thủ tục" [(ngModel)]="myInput"></ion-searchbar>
+  <button class="search" (click)="search()">Tìm kiếm</button>
   <div class="main-cnt">
     <img src="../assets/imgs/logobd.jpg" class="dp">
 
@@ -21,12 +22,19 @@
 
 
     <div class="tag">
-      <button ion-button color="blues" round>Khiếu nại</button>
-      <button ion-button round>Chuyển nhượng</button>
-      <button ion-button color="secondary" round>Cấp giấy phép</button>
-      <button ion-button color="danger" round>Đăng ký hợp đồng</button>
-      <button ion-button color="dark" round>Chứng thực hợp đồng</button>
+        <button ion-button color="blues" round >Khiếu nại</button>
+        <button ion-button round>Chuyển nhượng</button>
+        <button ion-button color="secondary" round>Cấp giấy phép</button>
+        <button ion-button color="danger" round>Đăng ký hợp đồng</button>
+        <button ion-button color="dark" round>Chứng thực hợp đồng</button>
     </div>
-    <page-search-result [m]="getText()"></page-search-result>
+    <!-- <ion-list no-lines class="main-list">
+      <ion-item *ngFor="let i of data" (click)="viewList(i.field)">
+        <ion-icon name="home" item-start></ion-icon>
+        {{ i.field }}
+        <p>{{ i.title }}</p>
+        <ion-icon name="arrow-dropright" item-end></ion-icon>
+      </ion-item>
+    </ion-list> -->
   </div>
 </ion-content>

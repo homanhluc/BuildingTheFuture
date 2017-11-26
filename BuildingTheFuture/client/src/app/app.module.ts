@@ -1,4 +1,4 @@
-import { SearchResultPage } from './../pages/search-result/search-result';
+import { MapsPage } from './../pages/maps/maps';
 import { detailClass } from './../pages/detail/detailClass';
 import { PageInfoPage } from './../pages/detail/page-info/page-info';
 import { PageInfoDePage } from './../pages/detail/page-info-de/page-info-de';
@@ -13,7 +13,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule } from '@angular/http';
-
+import { Geolocation } from '@ionic-native/geolocation';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
@@ -24,7 +24,7 @@ import { HomePage } from '../pages/home/home';
     FieldPage,
     DetailPage,
     PageDocsPage,
-    SearchResultPage,
+    MapsPage,
     PageInfoDePage,
     PageInfoPage,
     ParallaxDirective
@@ -40,8 +40,8 @@ import { HomePage } from '../pages/home/home';
     HomePage,
     FieldPage,
     DetailPage,
-    SearchResultPage,
     PageDocsPage,
+    MapsPage,
     PageInfoDePage,
     PageInfoPage
   ],
@@ -50,7 +50,8 @@ import { HomePage } from '../pages/home/home';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProceduresServiceService,
-    detailClass
+    detailClass,
+    Geolocation
   ]
 })
 export class AppModule {}

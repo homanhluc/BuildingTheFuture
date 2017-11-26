@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
 .ion-ios-add:before {
   content: "\f102";
 }
@@ -27972,6 +27973,13 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../fonts/Lato-Light.eot") format("embedded-opentype"), url("../fonts/Lato-Light.woff") format("woff"), url("../fonts/Lato-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 page-page-docs {
   white: #358cce;
 }
@@ -28155,7 +28163,7 @@ page-page-info-de ion-card ion-item {
   height: 120px;
   width: 120px;
   z-index: 10;
-  margin-top: -60px;
+  margin-top: -90px;
   position: relative;
   left: 50%;
   margin-right: -50%;
@@ -28183,12 +28191,23 @@ ion-searchbar {
 }
 
 .tag {
-  margin-top: 25px;
+  margin-top: 60px;
 }
 
-.ios page-home ion-list ion-item, .md page-home ion-list ion-item {
-  color: #0098DB;
-  background-color: #ecf0f1;
-  border-radius: 90px;
-  margin-bottom: 10px;
+.search {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  left: 37%;
+  top: 107px;
+  z-index: 11;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  background-color: #3636dd;
+}
+
+page-maps #map {
+  height: 100%;
 }

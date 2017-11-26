@@ -1,3 +1,4 @@
+import { MapsPage } from './../../maps/maps';
 import { detailClass } from './../detailClass';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
@@ -23,5 +24,10 @@ export class PageInfoDePage {
   ngOnInit() {
     this.data = this.detailClass.getter().infodetail;
     console.log(this.data);
+  }
+  mapView(name){
+    this.navCtrl.push(MapsPage, {
+      location: name
+    });
   }
 }
