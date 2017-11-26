@@ -12,116 +12,17 @@
 
 
 <ion-content padding>
-    <h3>Hồ sơ cần nộp và yêu cầu của thủ tục</h3>
-    <ion-list>
+  <h3>Hồ sơ cần nộp và yêu cầu của thủ tục</h3>
+  <ion-card  *ngFor="let i of data">
+      <ion-card-header text-wrap>
+          {{ i.name }}
+      </ion-card-header>
+      <ion-card-content>
+          <a [href] = "'http://dichvucong.binhduong.gov.vn/DVC/'+i.downloaddocs">
+            <ion-icon name="md-cloud-download">
 
-
-
-
-        <div class="container">
-            <section class="blue-section">
-              
-            </section>
-          
-            <ul class="plans">
-
-
-
-
-              <li class="plan highlight">
-                <span class="price price-green">ICON</span>
-                
-                <div class="details">
-                  <h1 class="plan-title">MUC 1</h1>
-                  <p class="plan-description">Chi tiet</p>
-                </div>
-                
-                <button class="btn select">....</button>
-              </li>
-              
-
-
-
-              <li class="plan">
-                <span class="price price-red">ICON</span>
-                
-                <div class="details">
-                  <h1 class="plan-title">MUC 2</h1>
-                  <p class="plan-description">Chi tiet</p>
-                </div>
-                
-                <button class="btn select">....</button>
-              </li>
-
-
-
-
-              <li class="plan">
-                  <span class="price price-red">ICON</span>
-                  
-                  <div class="details">
-                    <h1 class="plan-title">MUC 3</h1>
-                    <p class="plan-description">Chi tiet</p>
-                  </div>
-                  
-                  <button class="btn select">....</button>
-                </li>
-
-
-
-
-                <li class="plan">
-                    <span class="price price-red">ICON</span>
-                    
-                    <div class="details">
-                      <h1 class="plan-title">MUC 4</h1>
-                      <p class="plan-description">Chi tiet</p>
-                    </div>
-                    
-                    <button class="btn select">....</button>
-                  </li>
-            </ul>
-            
-            <p>And some paragraphs.</p>
-          </div>
-
-
-
-  
-
-
-
-
-        <ion-item>
-          <ion-avatar item-start>
-            <img ng-value="1">
-          </ion-avatar>
-          <h2>Cher</h2>
-        </ion-item>
-
-
-        <ion-item>
-            <ion-avatar item-start>
-              <img ng-value="2">
-            </ion-avatar>
-            <h2>Cher</h2>
-          </ion-item>
-
-
-          <ion-item>
-              <ion-avatar item-start>
-                <img ng-value="1">
-              </ion-avatar>
-              <h2>Cher</h2>
-            </ion-item>
-
-
-            <ion-item>
-                <ion-avatar item-start>
-                  <img ng-value="1">
-                </ion-avatar>
-                <h2>Cher</h2>
-              </ion-item>
-
-      </ion-list>
+            </ion-icon>
+          </a>
+      </ion-card-content>
+    </ion-card>
 </ion-content>

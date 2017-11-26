@@ -16,7 +16,7 @@ import { NavController, NavParams } from 'ionic-angular';
 export class PageDocsPage {
   data: any;
   groups = [];
-  shownGroup: any;
+  shownGroup = null;
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public detailClass: detailClass) {
@@ -24,16 +24,6 @@ export class PageDocsPage {
   ngOnInit() {
     this.data = this.detailClass.getter().documents;
     console.log(this.data);
-
-    for (let i=0; i<10; i++) {
-      this.groups[i] = {
-        name: i,
-        items: []
-      };
-      for (var j=0; j<3; j++) {
-        this.groups[i].items.push(i + '-' + j);
-      }
-    }
   }
   toggleGroup(group) {
     if (this.isGroupShown(group)) {
@@ -45,6 +35,4 @@ export class PageDocsPage {
   isGroupShown(group) {
     return this.shownGroup === group;
   };
-  
- 
 }

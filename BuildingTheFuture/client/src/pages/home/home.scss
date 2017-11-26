@@ -2,21 +2,21 @@
     page-home {
         .bg {
             background-image: url('../assets/imgs/dp.jpg');
-            height: 300px;
-            background-size: cover;
+            height: 120px;
+            background-size: 100px 100px;
             filter: blur(5px);
-            background-position: center center; 
+            background-position: center; 
         }
         .main-cnt {
             width: 100%;
             padding: 20px;
         }
         .dp {
-            border-radius: 50%;
-            height: 100px;
-            width: 100px;
+            border-radius: 100%;
+            height: 120px;
+            width: 120px;
             z-index: 10;
-            margin-top: -70px;
+            margin-top: -60px;
             position: relative;
             left: 50%;
             margin-right: -50%;
@@ -26,15 +26,21 @@
         ion-list ion-item {
             color: #0098DB;
             background-color: #ecf0f1;
-            border-radius: 10px;
+            border-radius: 90px;
             margin-bottom: 10px;
         }
     }
 }
 ion-searchbar {
-    position: fixed;
-    align-items: center;
-    width: 95%;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
     z-index: 11;
-    top: 60px;
+    top: 100px;
+    height: 50px;
+    border-radius: 10px; 
+
+}
+.tag{
+    margin-top: 25px;
 }

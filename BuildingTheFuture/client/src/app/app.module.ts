@@ -1,3 +1,4 @@
+import { SearchResultPage } from './../pages/search-result/search-result';
 import { detailClass } from './../pages/detail/detailClass';
 import { PageInfoPage } from './../pages/detail/page-info/page-info';
 import { PageInfoDePage } from './../pages/detail/page-info-de/page-info-de';
@@ -23,6 +24,7 @@ import { HomePage } from '../pages/home/home';
     FieldPage,
     DetailPage,
     PageDocsPage,
+    SearchResultPage,
     PageInfoDePage,
     PageInfoPage,
     ParallaxDirective
@@ -38,6 +40,7 @@ import { HomePage } from '../pages/home/home';
     HomePage,
     FieldPage,
     DetailPage,
+    SearchResultPage,
     PageDocsPage,
     PageInfoDePage,
     PageInfoPage

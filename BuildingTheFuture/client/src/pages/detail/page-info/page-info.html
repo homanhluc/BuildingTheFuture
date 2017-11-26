@@ -14,9 +14,59 @@
 
 
 <ion-content padding>
-<ion-list *ngFor="let i of data">
-  <ion-item>
-    {{i?.doing}}
-  </ion-item>
-</ion-list>
+
+  <ion-card>
+    <ion-card-header>
+      Lĩnh Vực
+    </ion-card-header>
+    <ion-card-content>
+      {{ data[0]?.field }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Cơ Quan Thực Hiện
+    </ion-card-header>
+    <ion-card-content>
+      {{ data[0]?.organization }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Cách Thực Hiện
+    </ion-card-header>
+    <ion-card-content>
+      {{ data[0]?.doing }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Thời hạn giải quyết
+    </ion-card-header>
+    <ion-card-content>
+      {{ data[0]?.termofsettlement }}
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card>
+    <ion-card-header>
+        Yêu Cầu Trả Phí
+    </ion-card-header>
+    <ion-card-content>
+      {{ data[0]?.fees }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Các Bước Thực Hiện
+    </ion-card-header>
+    <ion-card-content>
+      {{ data[0]?.stepstaken }}
+    </ion-card-content>
+  </ion-card>
 </ion-content>

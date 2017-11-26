@@ -15,7 +15,29 @@ import { NavController, NavParams, Events } from 'ionic-angular';
   templateUrl: 'page-info.html',
 })
 export class PageInfoPage {
+  items = [
+    'Pokémon Yellow',
+    'Super Metroid',
+    'Mega Man X',
+    'The Legend of Zelda',
+    'Pac-Man',
+    'Super Mario World',
+    'Street Fighter II',
+    'Half Life',
+    'Final Fantasy VII',
+    'Star Fox',
+    'Tetris',
+    'Donkey Kong III',
+    'GoldenEye 007',
+    'Doom',
+    'Fallout',
+    'GTA',
+    'Halo'
+  ];
 
+  itemSelected(item: string) {
+    console.log("Selected Item", item);
+  }
   data: any;
   link: any;
   constructor(public navCtrl: NavController,
@@ -33,7 +55,7 @@ export class PageInfoPage {
       this.data = this.detailClass.getter().information;
     } else {
       this.proceduresService.detail(this.link).subscribe(data => {
-        this.data = data.information;
+        this.data = data[0].information;
       });
     }
   }
