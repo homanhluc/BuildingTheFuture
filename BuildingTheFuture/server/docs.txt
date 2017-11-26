@@ -1,8 +1,0 @@
-﻿- Chạy server:
-	+ Bước 1: mở folder TraCuuThuTucHanhChinh
-	+ Bước 2: shift + click right ==> select open PowerShell (với win 10).
-	+ Bước 3: gõ "npm install" (requirement: install nodejs before).
-	+ Bước 4: gõ "node index.js" và để nguyên terminal.
-- Sử dụng:
-	+ Lấy 1 danh sách các TTHC: http://localhost:3000/all
-	+ Để xem chi tiết một thủ tục ta copy một linkdetail và past vào: http://localhost:3000/?linkdetail
